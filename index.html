@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>First Homework!</title>
+<meta charset="utf-8">
+<style>
+	body {
+		padding-top: 0;
+		color: white;
+		font: 17px/1.6 'Open Sans', sans-serif;
+		background-color: slategrey;
+		background-repeat: no-repeat;
+		background-size: cover; /* Фон на всю площадь при масштабировании страницы */
+		
+}
+     #wrapper {
+		background-image: url(02.jpg);
+		background-size: cover;
+		width: 800px;
+		height: auto; /*auto (или убрать height), чтобы блок с таблицей не съезжалась при масштабировании*/
+		margin: 0 auto;
+		padding-left: 50px;	/*отступы содержимого от границы*/
+		padding-right: 50px;	/*отступы содержимого от границы*/
+		padding-bottom: 50px;	/*отступы содержимого от границы*/
+     }
+	h1 {
+		text-align: center;
+	}
+	.profilepic {
+		display: inline-block;
+	}
+	
+	.profilepic img {
+		border: 3px solid #0F0D0D;
+		width: 150px;
+	}
+	
+	.bio1 {
+		display: inline-block;
+		padding-left: 30px;
+		vertical-align: top;
+	}
+	.bio1 p {
+		margin: 0 auto;
+	}
+	.calendar {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.calendar img {
+		vertical-align: middle;
+		width: 24px;
+	}
+	
+	ul {
+		list-style-type: none
+	}
+	.edit {
+		display: inline-block;
+	}
+	.salary {
+		display: inline-block;
+	}
+	table, th, td {
+		border: 2px solid white;
+		border-collapse: collapse;
+		font-size: 19px;
+		padding-left: 9px;
+		padding-right: 5px;
+	}
+	td {
+		font-style: italic;
+	}
+</style>
+</head>
+<body>
+<div id="wrapper">		<!--НАЧАЛО WRAPPER-->
+  <h1>Вакансия: Junior Frontend Developer</h1>
+  <div class="head">
+    <div class="profilepic"><img src="pic1.jpg" alt=""></div>
+    <div class="bio1">
+      <p>Имя: Халид<br>
+        Ссылка:<br>
+        Опыт работы: нет</p>
+    </div>
+  </div>
+  <div>
+    <form>
+      <b>Дата собеседования:</b>
+      <input type="date" name="intday">
+      <div class="calendar"><img src="cal2.jpg" alt=""></div>
+    </form>
+    <p><b>Уровень английского:</b></p>
+    <form>
+      <input type="radio" name="level" value="Bad" checked>
+      Плохо
+      <input type="radio" name="level" value="middle">
+      Средне
+      <input type="radio" name="level" value="good">
+      Хорошо
+      <input type="radio" name="level" value="excellent">
+      Превосходно
+    </form>
+    <p><b>Ключевые навыки:</b></p>
+    <ul>
+      <li>- HTML</li>
+      <li>- CSS/LESS</li>
+      <li>- JavaScript</li>
+      <li>- ...</li>
+    </ul>
+     <form>
+       <input type="text" name="skill" value="введите навык...">
+       <input type="button" value="Добавить в список">
+     </form>
+
+    <p class="edit"><b>Коммуникабельность:</b></p>
+    <select>
+      <option value="0">Выберите значение</option>
+      <option value="1">Доминантность (Дерзкий лидер)</option>
+      <option value="2">Мобильность (Генератор идей)</option>
+      <option value="3">Ригидность (Логичный педант)</option>
+      <option value="4">Интроверт ("Не трогайте меня")</option>
+    </select>
+    <form>
+      <p class="edit"><b>Желаемая з/п:</b></p>
+      <input type="text" name="skill" value="введите значение...">
+    </form>
+    <p><b>Подходит по критериям:</b></p>
+    <form>
+      <input type="checkbox" name="vehicle1" value="eng">
+      Знание английского
+      <input type="checkbox" name="vehicle2" value="salary">
+      Оклад
+      <input type="checkbox" name="vehicle1" value="skills">
+      Навыки
+      <input type="checkbox" name="vehicle2" value="dude">
+      Сразу видно, что свой человек
+    </form>
+    <p><b>Образование, курсы и т.п.</b></p>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Сроки обучения</th>
+        <th>Наименование учебного заведения, курсов...</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Какой-то срок №1 (не тюремный)</td>
+        <td>Какая-то вышка №1 (не сотовая)</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Какой-то срок №2 (не тюремный)</td>
+        <td>Какая-то вышка №2 (не сотовая)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Какой-то срок №3 (не тюремный)</td>
+        <td>Какая-то вышка №3 (не сотовая)</td>
+      </tr>
+    </table>
+  </div>
+</div>		<!--КОНЕЦ WRAPPER-->
+	
+</body>
+</html>
