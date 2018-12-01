@@ -1,12 +1,13 @@
-body {
+	body {
 		padding-top: 0;
 		color: white;
 		font: 17px/1.6 'Open Sans', sans-serif;
 		background-color: slategrey;
 		background-repeat: no-repeat;
+		margin-top: 0;
 		background-size: cover;	 /* Фон на всю площадь при масштабировании страницы */
-}
-     #wrapper {
+	}
+	#wrapper {
 		background-image: url(02.jpg);
 		background-size: cover;
 		width: 800px;
@@ -18,33 +19,54 @@ body {
      }
 	h1 {
 		text-align: center;
+		margin-top: 0;
+		transition: 2s;
 	}
-	.profilepic {
+	h1:hover {
+		background-color: white;
+		color: deeppink;
+		font-weight: bold;
+		border-radius: 45%;
+		font-style: italic;
+		text-transform: uppercase;
+	}
+		.profilepic {
 		display: inline-block;
 	}
-	
 	.profilepic img {
 		border: 3px solid #0F0D0D;
 		width: 150px;
+		transition: transform 2s;	/*Поворачивает контент на 360* */
 	}
-	
 	.profilepic img:hover  {	
-		transform: scale(1.5);
+		transform: scale(1.6);
+		border: solid red;
+		transform: rotate(360deg) scale(2); /*Поворачивает контент на 360* и увеличивает*/
 	}
 	.bio1 {
 		display: inline-block;
 		padding-left: 30px;
 		vertical-align: top;
 	}
+	span {
+		transition: 1s;
+	}
+	span:hover {
+		background-color: greenyellow;
+		color: black;
+		font-weight: bold;
+		border-radius: 6px;
+		padding: 2px 3px;
+	}
 	a {
 		text-decoration: none;
 		color: yellow;
 		}
-
 	a:hover  {	
 		color: black;
-		background-color: yellow;
+		background-color: hotpink;
 		border-radius: 50px;
+		padding: 2px 6px;
 		font-weight: bold;
 	}
 	.bio1 p {
@@ -53,36 +75,117 @@ body {
 	.calendar {
 		display: inline-block;
 		vertical-align: top;
-	}
-	.calendar img {
 		vertical-align: middle;
-		width: 24px;
+		width: 30px;
 	}
-	
-	.calendar img:hover  {	
-		transform: scale(1.5);
+	.calendar:hover  {	
+		transform: scale(1.7);
+		border: 1px solid red;
+	}
+					/* СТИЛИЗАЦИЯ input[type=radio]* - НАЧАЛО*/
+
+	input[type=radio] {	/* Убираем иконку Radio для замены на свой вариант */
+	  display: none;
+	}
+	input[type=radio] + label:before {	/* Добавляем свою иконку Radio из https://fontawesome.com*/
+		content: "\26AB";
+		border: 1px solid #C6EFDE;
+		border-radius: 50%;
+		display: inline-block;
+		font-size: 0;    
+		line-height: 20px;
+   		margin: -4px 6px 0 0px;
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		vertical-align: middle;		
+	}
+	input[type=radio]:checked + label:before { 	/*Добавляем "Точку" для выбора*/
+		background-color: deeppink;
+		
+	}
+					/* СТИЛИЗАЦИЯ input[type=radio]* - КОНЕЦ*/
+
+	input[type=date], [type=text], [type=number], select {	/*Стилизация input и select*/
+		padding: 5px 9px;
+		margin: 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		font-size: 16px;
+		font-style: italic;
+		box-sizing: border-box;
+	}
+	input[type=date]:focus, [type=text]:focus, [type=number]:focus { /*Сменить цвет поля ввода при нажатии мышкой*/
+		background-color: palegoldenrod;		
+	}
+	input[type=button]{				/*Для стилизации button*/
+		background-color: #4CAF50;
+		border: 2px ridge #7768F5;
+		color: white;
+		padding: 8px 10px;
+		border-radius: 5px;
+		font-style: italic;
+		margin: 4px 2px;
+		font-size: 14px;
+		cursor: pointer;			/*Для стилизации курсора при наведении на button*/
+		opacity: 0.9;
+	}	
+	input[type=button]:hover {		/*Для смены цвета button при наведении */
+		background-color: greenyellow;
+		color: black;
+		font-style: normal;
+		font-weight: bold;
+	}
+	h3 {
+		display: inline-block;
+		margin-bottom: 5px;
 	}
 	ul {
 		list-style-type: none;
+		margin: 0;
+		width: 110px;
 	}
-
 	.list1:hover,.list2:hover,.list3:hover,.list4:hover {
-		background-color: yellow;			/*Строка меняет цвет при наведении мышкой */
-		color: black;					/*Текст меняет цвет при наведении мышкой */
+		background-color: green;		/*Строка меняет цвет при наведении мышкой */
+		color: white;					/*Текст меняет цвет при наведении мышкой */
 		transform: scale(1.1);
 		width: 110px;
 		border-radius: 10px;
 		font-weight: bolder;
 		text-align: center;
 	}
-
 	.edit {
 		display: inline-block;
 	}
 	.salary {
 		display: inline-block;
 	}
-										/* ДЛЯ ТАБЛИЦЫ */
+					/* СТИЛИЗАЦИЯ input[type=checkbox]* - НАЧАЛО*/
+
+	input[type=checkbox] {	/* Убираем иконку Checkbox для замены на свой вариант */
+		display: none;
+	}
+	input[type=checkbox] + label:before {
+	/* Добавляем свою иконку Checkbox из https://fontawesome.com*/
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid #C6EFDE;
+    font-size: 20px;    
+    line-height: 22px;
+    margin: -4px 6px 0 0px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+	input[type=checkbox]:checked + label:before {	/*Добавляем "Галочку" для выбора*/
+		color: deeppink;
+	}
+					/* СТИЛИЗАЦИЯ input[type=checkbox]* - КОНЕЦ*/
+
+								/* ДЛЯ ТАБЛИЦЫ */
 	table, th, td {
 		border: 1px solid white;
 		font-size: 19px;
@@ -93,14 +196,18 @@ body {
 		border-collapse: separate;
 		color: khaki;
 	}
-
 	th {
 		text-align: center;
-		border: 4px solid #A537B0;
-		color: deepskyblue;
-		border-style: outset;
+		border: 3px dotted hotpink ;
+		color: black;
+		transition: transform 2s;	/*Поворачивает контент на 360* */
+		background-color: wheat;
 	}
-
+	th:hover {
+		transform: rotate(360deg);	/* Поворачивает контент на 360* */
+		background-color: aquamarine;
+		color: midnightblue;
+	}
 	table td:hover  {
 		background-color: pink;			/*Строка меняет цвет при наведении мышкой */
 		color: black;					/*Текст меняет цвет при наведении мышкой */
