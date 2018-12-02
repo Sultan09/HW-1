@@ -30,16 +30,21 @@
 		font-style: italic;
 		text-transform: uppercase;
 	}
-		.profilepic {
+	.profilepic {
 		display: inline-block;
 	}
 	.profilepic img {
-		border: 3px solid #0F0D0D;
-		width: 150px;
+		border: 3px solid;
+		width: 155px;
 		transition: transform 2s;	/*Поворачивает контент на 360* */
-	}
+		border-radius: 12px;
+		box-shadow:  					/*Добавляем тень для img*/
+   		-13px -13px 2px -5px rgba(200,82,45,.5),
+  		-13px 13px 2px -5px rgba(0,205,255,.5),
+   		13px -13px 2px -5px rgba(255,0,0,.5),
+   		13px 13px 2px -5px rgba(265,205,0,.5);
+}
 	.profilepic img:hover  {	
-		transform: scale(1.6);
 		border: solid red;
 		transform: rotate(360deg) scale(2); /*Поворачивает контент на 360* и увеличивает*/
 	}
@@ -83,9 +88,8 @@
 		border: 1px solid red;
 	}
 					/* СТИЛИЗАЦИЯ input[type=radio]* - НАЧАЛО*/
-
 	input[type=radio] {	/* Убираем иконку Radio для замены на свой вариант */
-	  display: none;
+		display: none;
 	}
 	input[type=radio] + label:before {	/* Добавляем свою иконку Radio из https://fontawesome.com*/
 		content: "\26AB";
@@ -102,7 +106,6 @@
 	}
 	input[type=radio]:checked + label:before { 	/*Добавляем "Точку" для выбора*/
 		background-color: deeppink;
-		
 	}
 					/* СТИЛИЗАЦИЯ input[type=radio]* - КОНЕЦ*/
 
@@ -115,13 +118,16 @@
 		font-size: 16px;
 		font-style: italic;
 		box-sizing: border-box;
+		outline: none;				/*Убирает голубую рамку при нажатии на поле ввода*/
+		box-shadow: inset rgba(0,0,0,.6) 0 -3px 8px, rgba(0,0,0,.8) 0 3px 8px -3px; /*Добавляем тень для input*/
 	}
 	input[type=date]:focus, [type=text]:focus, [type=number]:focus { /*Сменить цвет поля ввода при нажатии мышкой*/
-		background-color: palegoldenrod;		
+		background-color: palegoldenrod;
+		outline: none;				/*Убирает голубую рамку при нажатии на поле ввода*/
 	}
 	input[type=button]{				/*Для стилизации button*/
-		background-color: #4CAF50;
-		border: 2px ridge #7768F5;
+		background-image: linear-gradient(white, blue, red); /*Для градиентной заливки button*/
+		border: 1px ridge #7768F5;
 		color: white;
 		padding: 8px 10px;
 		border-radius: 5px;
@@ -130,12 +136,14 @@
 		font-size: 14px;
 		cursor: pointer;			/*Для стилизации курсора при наведении на button*/
 		opacity: 0.9;
+		outline: none;				/*Убирает голубую рамку при нажатии на button */
 	}	
 	input[type=button]:hover {		/*Для смены цвета button при наведении */
 		background-color: greenyellow;
-		color: black;
+		color: white;
 		font-style: normal;
 		font-weight: bold;
+		outline: none;				/*Убирает голубую рамку при нажатии на button */
 	}
 	h3 {
 		display: inline-block;
@@ -204,7 +212,7 @@
 		background-color: wheat;
 	}
 	th:hover {
-		transform: rotate(360deg);	/* Поворачивает контент на 360* */
+		transform: rotate(360deg) scale(1.5);	/* Поворачивает контент на 360* */
 		background-color: aquamarine;
 		color: midnightblue;
 	}
